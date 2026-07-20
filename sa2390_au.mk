@@ -3,12 +3,6 @@ TARGET_BOARD_SUFFIX := _au
 TARGET_BOARD_FAMILY := f-sa2390
 TARGET_BOOTLOADER_BOARD_NAME := sa2390
 
-# Override KERNEL_PREBUILT_DIR with := (not ?=) so it always points to the
-# shikra kernel prebuilt directory regardless of include order.
-# device/qcom/sa2390-kernel does not exist in this vendor tree; shikra-kernel
-# carries the matching Image, .config, Module.symvers, and all DLKM .ko files.
-KERNEL_PREBUILT_DIR := device/qcom/shikra-kernel
-
 # Automotive board type flags
 TARGET_BOARD_AUTO := true
 TARGET_BOARD_TYPE := auto
