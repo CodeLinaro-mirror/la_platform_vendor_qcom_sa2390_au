@@ -4,9 +4,6 @@ TARGET_CPU_VARIANT := generic
 
 BUILD_BROKEN_PLUGIN_VALIDATION := vndfuzztest
 
-TARGET_OUT_INTERMEDIATES := out/target/product/sa2390_au/obj
-$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr:
-	 mkdir -p $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 # Some QTI proprietary Android.bp files (e.g. vendor/qcom/proprietary/wlan/
 # utils/Android.bp:pktlogconf) still use the now-deprecated `clang: true`
 # property. Soong errors out unless this workaround is set:

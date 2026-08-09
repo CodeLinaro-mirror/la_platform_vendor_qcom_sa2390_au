@@ -1,8 +1,3 @@
-TARGET_BOARD_PLATFORM := sa2390
-TARGET_BOARD_SUFFIX := _au
-TARGET_BOARD_FAMILY := f-sa2390
-TARGET_BOOTLOADER_BOARD_NAME := sa2390
-
 # Automotive board type flags
 TARGET_BOARD_AUTO := true
 TARGET_BOARD_TYPE := auto
@@ -26,11 +21,18 @@ include device/qcom/shikra_64/shikra_64.mk
 # references in this file.
 LOCAL_PATH := device/qcom/sa2390_au
 
+TARGET_BOARD_PLATFORM := sa2390
+TARGET_BOARD_SUFFIX := _au
+TARGET_BOARD_FAMILY := f-sa2390
+TARGET_BOOTLOADER_BOARD_NAME := sa2390
+
 # Override identity so it becomes a distinct lunch target
 PRODUCT_NAME   := sa2390_au
 PRODUCT_DEVICE := sa2390_au
 PRODUCT_BRAND  := qti
 PRODUCT_MODEL  := sa2390_au for arm64
+
+QCOM_BOARD_PLATFORMS += sa2390
 
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
@@ -39,7 +41,11 @@ KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTAL
 TARGET_NO_TELEPHONY := true
 
 TARGET_CONSOLE_ENABLED ?= true
+
 TARGET_USES_QMAA_OVERRIDE_DATA_CONNECTIVITY := false
+TARGET_USES_QMAA_OVERRIDE_WFD     := false
+TARGET_USES_QMAA_OVERRIDE_GPS     := false
+TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULE := false
 
 # Inherit Android Automotive (Car) system product makefiles
 $(call inherit-product, device/qcom/qssi_au/qssi_au_system_generic.mk)
