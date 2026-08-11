@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += ScriptExecutor
 # the next instance sees prop=3, loads the stub HAL, and boot completes.
 # On subsequent boots the property resets to 2 so normal audio init is retried
 # automatically once the audio drivers are properly configured.
-PRODUCT_PROPERTY_OVERRIDES += persist.vendor.audio.hal.stubmode=2
+PRODUCT_PROPERTY_OVERRIDES += persist.vendor.audio.hal.stubmode=2 \
+	ro.sf.lcd_density=140
 
 #################################################################################
 # This is the End of file                                                       #
