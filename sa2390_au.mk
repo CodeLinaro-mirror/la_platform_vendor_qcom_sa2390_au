@@ -52,8 +52,6 @@ $(call inherit-product, packages/services/Car/car_product/build/car_vendor.mk)
 
 # Enable Car Telemetry
 ENABLE_CARTELEMETRY_SERVICE := true
-PRODUCT_PACKAGES += android.automotive.telemetryd@1.0
-PRODUCT_PACKAGES += ScriptExecutor
 
 # Audio HAL stub-mode fallback.
 # The shikra virtual soundcard (shikradspvirtualsndcard) does not register during
