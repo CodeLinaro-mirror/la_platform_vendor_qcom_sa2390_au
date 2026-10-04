@@ -16,6 +16,8 @@ BUILD_BROKEN_CLANG_PROPERTY := true
 
 BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+
 $(call soong_config_set,qti,IS_SHIKRA_TARGET,true)
 
 $(call add_soong_config_var,qti,IS_ANDROID_SHIPPING_W)
